@@ -11,29 +11,27 @@ print("Sayfa çekiliyor...")
 r = requests.get(URL, timeout=30)
 soup = BeautifulSoup(r.text, "html.parser")
 
-# Tüm tabloları bul
 tables = soup.find_all("table")
 
 print(f"{len(tables)} tablo bulundu")
 
-for i, t in enumerate(tables):
-    print(f"Tablo {i}:", t.get_text(strip=True)[:100])
+# ✅ SADECE AYRILAN GEMİLER (tablo 2)
+target_table = tables[2]
 
-# 🔥 Şimdilik en basit yöntem: tüm satırları tara
-rows = soup.find_all("tr")
+rows = target_table.find_all("tr")
 
 ships = []
 
 for row in rows:
     cols = [c.get_text(strip=True) for c in row.find_all("td")]
 
-    # 4 kolon bekliyoruz: gemi + geliş + ayrılış + acente
+    # 4 kolon: gemi, geliş, ayrılış, acente
     if len(cols) == 4:
         ships.append(cols)
 
-print(f"{len(ships)} satır bulundu")
+print(f"{len(ships)} gemi bulundu")
 
-# CSV yoksa oluştur
+# klasör yoksa oluştur
 os.makedirs("data", exist_ok=True)
 
 existing = set()
@@ -46,7 +44,6 @@ if os.path.exists(CSV_FILE):
             if len(row) >= 3:
                 existing.add(row[0] + row[2])
 
-# yeni kayıtları ekle
 new_rows = 0
 
 with open(CSV_FILE, "a", newline="", encoding="utf-8") as f:
