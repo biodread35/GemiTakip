@@ -15,31 +15,19 @@ soup = BeautifulSoup(r.text, "html.parser")
 # tabloları bul
 tables = soup.find_all("table")
 print(f"{len(tables)} tablo bulundu")
-for i, table in enumerate(tables):
-    print(f"--- TABLO {i} ---")
-    print(table.get_text(" ", strip=True)[:200])
 
-# ✅ Dinamik olarak "Ayrılan Gemiler" tablosunu bul
-target_table = None
-for table in tables:
-    th = table.find("th")
-    if th and "Ayrılan Gemiler" in th.text:
-        target_table = table
-        break
+if len(tables) == 0:
+    print("⚠ Tablo bulunamadı. Bu hafta veri yok olabilir.")
+    exit(0)
 
-if target_table is None:
-    print("⚠ Ayrılan Gemiler tablosu bulunamadı. Bu hafta veri yok olabilir.")
-    exit(0)  # workflow fail olmasın, success olarak bırak
+# Ayrılan gemiler her zaman son tablo
+target_table = tables[-1]
 
-# satırları al
 rows = target_table.find_all("tr")
-
 ships = []
 
 for row in rows[1:]:  # başlık satırını atla
     cols = [c.get_text(strip=True) for c in row.find_all("td")]
-
-    # 4 kolon: gemi, acente, geliş, ayrılış
     if len(cols) == 4:
         ships.append(cols)
 
