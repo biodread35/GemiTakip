@@ -1,0 +1,466 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=9; chrome=1" /><meta http-equiv="Pragma" content="no-cache" /><meta name="robots" content="index,follow" /><title>
+	TCEEGE | Konteyner Terminal İşletmeleri. Konteyner Limanı, Aliağa liman, İzmir, izmir
+</title><meta id="ctl00_keywords" name="keywords" content="TCEEGE, Konteyner Terminal İşletmeleri, Konteyner Limanı, Aliağa liman, İzmir, izmir" /><meta id="ctl00_description" name="description" content="TCEEGE | Konteyner Terminal İşletmeleri. Konteyner Limanı, Aliağa liman, İzmir, izmir" /><meta name="Publisher" content="http://www.venusajans.com" /><meta name="copyright" content="Copyright © 2026" /><link type="text/css" rel="stylesheet" href="/css/style.css" />
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" language="javascript">
+    $(document).ready(function(e) {
+	  $("#nav li.main").each(function() {
+		  var t = $(this);
+		  var a = $("a:first",t);
+		  var c = a.clone();
+		  var w = t.width()+5;
+		  var h = t.height();
+		  a.wrap("<span/>");
+		  $("span a",t).width(w).height(h);
+		  $("span",t).width(w).height(h).append(c);
+	  });//each ends
+	  
+	  $("#nav li.main").hover(function(){
+		  var t = $(this);
+		  var s = $("span a:first",t);
+		  var w = t.width()+5;
+		  var o = t.outerWidth();
+		  var h = t.height();
+		  var g = t.position().left;
+		  
+		  s.stop().animate({marginTop:-h},"fast");				
+	  },function(){
+		  var t = $(this);
+		  var s = $("span a:first",t);
+		  s.stop().animate({marginTop:0},"fast");		
+	  });//hover ends
+    });
+    </script>
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/highslide/jquery.fancybox.css" media="screen" />
+    <script type="text/javascript" src="/highslide/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script type="text/javascript" src="/highslide/jquery.fancybox.pack.js"></script>
+    <link type="text/css" rel="stylesheet" href="/css/form-css.css">
+
+    <style type="text/css">
+
+        .ttt{
+            text-align:center;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a[rel^=gallery]").fancybox({
+                'transitionIn': 'none',
+                'transitionOut': 'none',
+                'titlePosition': 'over'
+            });
+        });
+
+        $(window).load(function (e) {
+            if ($(".photoGallery").length) {
+                $(".photoGallery img").each(function (index, element) {
+                    var h = parseFloat($(this).height(), 10);
+                    if (h < 120) {
+                        $(this).addClass("h").removeAttr("width").removeAttr("height").height(120);
+                        var w = parseFloat($(this).width(), 10);
+                        if (w > 160) {
+                            var d = (160 - w) / 2;
+                            $(this).css({ position: "relative", left: d });
+                        }
+                    }
+                    else {
+                        $(this).addClass("w");
+                    }
+                });
+                $(".photoGallery li").hover(function () {
+                    if ($("img", this).hasClass("h")) {
+                        $("img", this).stop().animate({ height: 140 }, "slow");
+                    }
+                    else if ($("img", this).hasClass("w")) {
+                        $("img", this).stop().animate({ width: 180 }, "slow");
+                    }
+                }, function () {
+                    if ($("img", this).hasClass("h")) {
+                        $("img", this).stop().animate({ height: 120 }, "slow");
+                    }
+                    else if ($("img", this).hasClass("w")) {
+                        $("img", this).stop().animate({ width: 160 }, "slow");
+                    }
+                });
+            }
+        });//window loaded
+    </script>
+
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="./gemi-izleme.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTI0ODc4NzA0Nw9kFgJmD2QWBgIBD2QWBgIFDxYCHgdjb250ZW50BVlUQ0VFR0UsIEtvbnRleW5lciBUZXJtaW5hbCDEsMWfbGV0bWVsZXJpLCBLb250ZXluZXIgTGltYW7EsSwgQWxpYcSfYSBsaW1hbiwgxLB6bWlyLCBpem1pcmQCBg8WAh8ABVpUQ0VFR0UgfCBLb250ZXluZXIgVGVybWluYWwgxLDFn2xldG1lbGVyaS4gS29udGV5bmVyIExpbWFuxLEsIEFsaWHEn2EgbGltYW4sIMSwem1pciwgaXptaXJkAggPFgIeBFRleHQFNTxtZXRhIG5hbWU9ImNvcHlyaWdodCIgY29udGVudD0iQ29weXJpZ2h0IMKpIDIwMjYiIC8+ZAIDD2QWDgIBD2QWAgIBD2QWAmYPFgIfAQXILDx1bCBpZD0ibmF2IiBjbGFzcz0ibCBhIj4KPGxpIGNsYXNzPSJtYWluIj48YSBocmVmPSIvaWxldGlzaW0uYXNweCIgdGl0bGU9IsSwbGV0acWfaW0iID7EsGxldGnFn2ltPC9hPgo8L2xpPgo8bGkgY2xhc3M9Im1haW4iPjxhIGhyZWY9Ii9oYWJlcmxlci5hc3B4IiB0aXRsZT0iSGFiZXJsZXIiID5IYWJlcmxlcjwvYT4KPC9saT4KPGxpIGNsYXNzPSJtYWluIj48YSBocmVmPSIvbXVzdGVyaS1naXJpc2kuYXNweCIgdGl0bGU9IlRDRUVHRSBPbmxpbmUiID5UQ0VFR0UgT25saW5lPC9hPgo8dWw+CjxsaT48ZGl2IGNsYXNzPSJpbWFnZSBmbCI+PGEgaHJlZj0iaHR0cDovL29ubGluZS50Y2VlZ2UuY29tLnRyL0d1bGxzRXllV2ViL1ZpZXcvTG9nT25WaWV3LmFzcHgiIHRpdGxlPSJNw7zFn3RlcmkgR2lyacWfaSIgdGFyZ2V0PSJfYmxhbmsiPjxpbWcgc3JjPSIvaW1hZ2VzL21lbnUvMjAxMzgyODJmNWQxY2JjLTcxOTgtNDZjNC1hNDViLTQ5MDE2MWU4Y2Y1My5qcGciIGFsdD0iIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiPjwvYT48L2Rpdj4KPGRpdiBjbGFzcz0iZGVzYyBmbCI+PGgzPjxhIGhyZWY9Imh0dHA6Ly9vbmxpbmUudGNlZWdlLmNvbS50ci9HdWxsc0V5ZVdlYi9WaWV3L0xvZ09uVmlldy5hc3B4IiB0aXRsZT0iTcO8xZ90ZXJpIEdpcmnFn2kiIHRhcmdldD0iX2JsYW5rIj5Nw7zFn3RlcmkgR2lyacWfaTwvYT48L2gzPgo8cD48YSBocmVmPSJodHRwOi8vb25saW5lLnRjZWVnZS5jb20udHIvR3VsbHNFeWVXZWIvVmlldy9Mb2dPblZpZXcuYXNweCIgdGl0bGU9Ik3DvMWfdGVyaSBHaXJpxZ9pIiB0YXJnZXQ9Il9ibGFuayI+TcO8xZ90ZXJpIGdpcmnFnyBzaXN0ZW1pbWl6aSBrdWxsYW5hcmFrIG9ubGluZSBoaXptZXRsZXJpbWl6ZGVuIHlhcmFybGFuYWJpbGlyc2luaXouPC9hPjwvcD4KPC9kaXY+CjwvbGk+CjxsaT48ZGl2IGNsYXNzPSJpbWFnZSBmbCI+PGEgaHJlZj0iL3lhbmFzbWEtcGxhbmkuYXNweCIgdGl0bGU9IllhbmHFn21hIFBsYW7EsSIgPjxpbWcgc3JjPSIvaW1hZ2VzL21lbnUvMjAxMzgyOGI1OThkOWM1LTM3ZDEtNDEzMS1hMjk1LTNjY2ViMGM1ZDg1Mi5qcGciIGFsdD0iIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiPjwvYT48L2Rpdj4KPGRpdiBjbGFzcz0iZGVzYyBmbCI+PGgzPjxhIGhyZWY9Ii95YW5hc21hLXBsYW5pLmFzcHgiIHRpdGxlPSJZYW5hxZ9tYSBQbGFuxLEiID5ZYW5hxZ9tYSBQbGFuxLE8L2E+PC9oMz4KPHA+PGEgaHJlZj0iL3lhbmFzbWEtcGxhbmkuYXNweCIgdGl0bGU9IllhbmHFn21hIFBsYW7EsSIgPllhbmHFn21hIFBsYW7EsSBpbGUgaWxnaWxpIGRldGF5bGFyxLEgw7bEn3Jlbm1layBpw6dpbiB0xLFrbGF5xLFuxLF6LjwvYT48L3A+CjwvZGl2Pgo8L2xpPgo8bGk+PGRpdiBjbGFzcz0iaW1hZ2UgZmwiPjxhIGhyZWY9Ii9jZnMtaGl6bWV0bGVyaS10YWxlcC1mb3JtdS5hc3B4IiB0aXRsZT0iQ0ZTIEhpem1ldGxlcmkgVGFsZXAgRm9ybXUiID48aW1nIHNyYz0iL2ltYWdlcy9tZW51LzIwMTM4MjhjZDk1NzIzNC1kYmNiLTQwZjgtYWNiZC0xMTgyY2M3YWE3YzguanBnIiBhbHQ9IiIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIj48L2E+PC9kaXY+CjxkaXYgY2xhc3M9ImRlc2MgZmwiPjxoMz48YSBocmVmPSIvY2ZzLWhpem1ldGxlcmktdGFsZXAtZm9ybXUuYXNweCIgdGl0bGU9IkNGUyBIaXptZXRsZXJpIFRhbGVwIEZvcm11IiA+Q0ZTIEhpem1ldGxlcmkgVGFsZXAgRm9ybXU8L2E+PC9oMz4KPHA+PGEgaHJlZj0iL2Nmcy1oaXptZXRsZXJpLXRhbGVwLWZvcm11LmFzcHgiIHRpdGxlPSJDRlMgSGl6bWV0bGVyaSBUYWxlcCBGb3JtdSIgPkNGUyBIaXptZXRsZXJpIFRhbGVwIEZvcm11bnUgYmlsZ2lzYXlhcsSxbsSxemEgaW5kaXJtZWsgacOnaW4gdMSxa2xhecSxbsSxei48L2E+PC9wPgo8L2Rpdj4KPC9saT4KPGxpIHN0eWxlPSJtYXJnaW4tcmlnaHQ6MDsiPjxkaXYgY2xhc3M9ImltYWdlIGZsIj48YSBocmVmPSIvYmFua2EtaGVzYXAtbnVtYXJhbGFyaS5hc3B4IiB0aXRsZT0iVGFyaWZlbGVyIHZlIEhlc2FwbGFyIiA+PGltZyBzcmM9Ii9pbWFnZXMvbWVudS8yMDEzODI4MzJmZjZhMzctYTg2Ny00MjMyLWJhNzItYjcxODE0MDE5YTM4LmpwZyIgYWx0PSIiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+PC9hPjwvZGl2Pgo8ZGl2IGNsYXNzPSJkZXNjIGZsIj48aDM+PGEgaHJlZj0iL2JhbmthLWhlc2FwLW51bWFyYWxhcmkuYXNweCIgdGl0bGU9IlRhcmlmZWxlciB2ZSBIZXNhcGxhciIgPlRhcmlmZWxlciB2ZSBIZXNhcGxhcjwvYT48L2gzPgo8cD48YSBocmVmPSIvYmFua2EtaGVzYXAtbnVtYXJhbGFyaS5hc3B4IiB0aXRsZT0iVGFyaWZlbGVyIHZlIEhlc2FwbGFyIiA+QmFua2EgaGVzYXAgbnVtYXJhbGFyxLFtxLF6xLEgw7bEn3Jlbm1layBpw6dpbiB0xLFrbGF5xLFuxLF6LjwvYT48L3A+CjwvZGl2Pgo8L2xpPgo8L3VsPgo8L2xpPgo8bGkgY2xhc3M9Im1haW4iPjxhIGhyZWY9Ii90ZXJtaW5hbC1vemVsbGlrbGVyaS5hc3B4IiB0aXRsZT0iVGVybWluYWwiID5UZXJtaW5hbDwvYT4KPHVsPgo8bGk+PGRpdiBjbGFzcz0iaW1hZ2UgZmwiPjxhIGhyZWY9Ii90ZXJtaW5hbC1vemVsbGlrbGVyaS5hc3B4IiB0aXRsZT0iVGVybWluYWwgw5Z6ZWxsaWtsZXJpIiA+PGltZyBzcmM9Ii9pbWFnZXMvbWVudS8yMDEzODI4Y2UwN2FmMmMtNmY0OS00YjU3LTg3YjktZjM4NTBmOTczZGJiLmpwZyIgYWx0PSIiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+PC9hPjwvZGl2Pgo8ZGl2IGNsYXNzPSJkZXNjIGZsIj48aDM+PGEgaHJlZj0iL3Rlcm1pbmFsLW96ZWxsaWtsZXJpLmFzcHgiIHRpdGxlPSJUZXJtaW5hbCDDlnplbGxpa2xlcmkiID5UZXJtaW5hbCDDlnplbGxpa2xlcmk8L2E+PC9oMz4KPHA+PGEgaHJlZj0iL3Rlcm1pbmFsLW96ZWxsaWtsZXJpLmFzcHgiIHRpdGxlPSJUZXJtaW5hbCDDlnplbGxpa2xlcmkiID5BbGlhxJ9hLCBOZW1ydXQgS8O2cmZlemluZGUgRWdlIEfDvGJyZSBTYW5heWkgTGltYW4gVGVzaXNsZXJpIGnDp2VyaXNpbmRlIGhpem1ldCB2ZXJlbiBUQ0VFR0U7IDcwMyBtIGdlbWkgeWFuYcWfxLFsYWJpbGlyLi4uPC9hPjwvcD4KPC9kaXY+CjwvbGk+CjxsaT48ZGl2IGNsYXNzPSJpbWFnZSBmbCI+PGEgaHJlZj0iL2VraXBtYW5sYXJpbWl6LmFzcHgiIHRpdGxlPSJFa2lwbWFubGFyxLFtxLF6IiA+PGltZyBzcmM9Ii9pbWFnZXMvbWVudS8yMDEzODI4NTU1YzZjOGQtZDRiYS00YzUzLWEyMWMtMGQ3MDNmMzBhMTViLmpwZyIgYWx0PSIiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+PC9hPjwvZGl2Pgo8ZGl2IGNsYXNzPSJkZXNjIGZsIj48aDM+PGEgaHJlZj0iL2VraXBtYW5sYXJpbWl6LmFzcHgiIHRpdGxlPSJFa2lwbWFubGFyxLFtxLF6IiA+RWtpcG1hbmxhcsSxbcSxejwvYT48L2gzPgo8cD48YSBocmVmPSIvZWtpcG1hbmxhcmltaXouYXNweCIgdGl0bGU9IkVraXBtYW5sYXLEsW3EsXoiID5Fa2lwbWFubGFyxLFtxLF6xLEgdmUgYnUgZWtpcG1hbmxhcmEgYWl0IHRla25payDDtnplbGxpa2xlcmkgw7bEn3Jlbm1layBpw6dpbiB0xLFrbGF5xLFuxLF6LjwvYT48L3A+CjwvZGl2Pgo8L2xpPgo8bGk+PGRpdiBjbGFzcz0iaW1hZ2UgZmwiPjxhIGhyZWY9Ii9mb3RvZ3JhZi1nYWxlcmlzaS5hc3B4IiB0aXRsZT0iRm90b8SfcmFmIEdhbGVyaXNpIiA+PGltZyBzcmM9Ii9pbWFnZXMvbWVudS8yMDEzODI4NGI5ZmU3YTItYTJlZi00ZDhmLTkwZWItYWY3ZWZkMGJkNThjLmpwZyIgYWx0PSIiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+PC9hPjwvZGl2Pgo8ZGl2IGNsYXNzPSJkZXNjIGZsIj48aDM+PGEgaHJlZj0iL2ZvdG9ncmFmLWdhbGVyaXNpLmFzcHgiIHRpdGxlPSJGb3RvxJ9yYWYgR2FsZXJpc2kiID5Gb3RvxJ9yYWYgR2FsZXJpc2k8L2E+PC9oMz4KPHA+PGEgaHJlZj0iL2ZvdG9ncmFmLWdhbGVyaXNpLmFzcHgiIHRpdGxlPSJGb3RvxJ9yYWYgR2FsZXJpc2kiID5Gb3RvxJ9yYWZsYXIgZ2FsZXJpbWl6ZGVraSBmb3RvxJ9yYWZsYXLEsSBpbmNlbGVtZWsgacOnaW4gdMSxa2xhecSxbsSxei48L2E+PC9wPgo8L2Rpdj4KPC9saT4KPC91bD4KPC9saT4KPGxpIGNsYXNzPSJtYWluIj48YSBocmVmPSIvaGl6bWV0bGVyaW1pei5hc3B4IiB0aXRsZT0iSGl6bWV0bGVyaW1peiIgPkhpem1ldGxlcmltaXo8L2E+CjwvbGk+CjxsaSBjbGFzcz0ibWFpbiI+PGEgaHJlZj0iL3Rhbml0aW0uYXNweCIgdGl0bGU9IlRDRUVHRSBIYWtrxLFuZGEiID5UQ0VFR0UgSGFra8SxbmRhPC9hPgo8dWw+CjxsaT48ZGl2IGNsYXNzPSJpbWFnZSBmbCI+PGEgaHJlZj0iL3Rhbml0aW0uYXNweCIgdGl0bGU9Ikhha2vEsW3EsXpkYSIgPjxpbWcgc3JjPSIvaW1hZ2VzL21lbnUvMjAxMzgyODlkODJmNzdlLTI0NDAtNDZhMi04NzM0LTNiNjNkMGY3ZGNhMi5qcGciIGFsdD0iIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiPjwvYT48L2Rpdj4KPGRpdiBjbGFzcz0iZGVzYyBmbCI+PGgzPjxhIGhyZWY9Ii90YW5pdGltLmFzcHgiIHRpdGxlPSJIYWtrxLFtxLF6ZGEiID5IYWtrxLFtxLF6ZGE8L2E+PC9oMz4KPHA+PGEgaHJlZj0iL3Rhbml0aW0uYXNweCIgdGl0bGU9Ikhha2vEsW3EsXpkYSIgPkRldGF5bMSxIEJpbGdpIGFsbWFrIGnDp2luIHTEsWtsYXnEsW7EsXouPC9hPjwvcD4KPC9kaXY+CjwvbGk+CjxsaT48ZGl2IGNsYXNzPSJpbWFnZSBmbCI+PGEgaHJlZj0iL3lvbmV0aW0tc2lzdGVtbGVyaS5hc3B4IiB0aXRsZT0iWcO2bmV0aW0gU2lzdGVtbGVyaSB2ZSBQb2xpdGlrYSIgPjxpbWcgc3JjPSIvaW1hZ2VzL21lbnUvMjAxMzgyODYyZWNhODJkLWQwMDEtNGE0YS05NTQwLWQ2OWVhZGFmNDliMi5qcGciIGFsdD0iIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiPjwvYT48L2Rpdj4KPGRpdiBjbGFzcz0iZGVzYyBmbCI+PGgzPjxhIGhyZWY9Ii95b25ldGltLXNpc3RlbWxlcmkuYXNweCIgdGl0bGU9IlnDtm5ldGltIFNpc3RlbWxlcmkgdmUgUG9saXRpa2EiID5Zw7ZuZXRpbSBTaXN0ZW1sZXJpIHZlIFBvbGl0aWthPC9hPjwvaDM+CjxwPjxhIGhyZWY9Ii95b25ldGltLXNpc3RlbWxlcmkuYXNweCIgdGl0bGU9IlnDtm5ldGltIFNpc3RlbWxlcmkgdmUgUG9saXRpa2EiID5Zw7ZuZXRpbSBzaXN0ZW1sZXJpIGlsZSBpbGdpbGkgZGV0YXlsxLEgYmlsZ2kgYWxtYWsgacOnaW4gdMSxa2xhecSxbsSxei48L2E+PC9wPgo8L2Rpdj4KPC9saT4KPGxpPjxkaXYgY2xhc3M9ImltYWdlIGZsIj48YSBocmVmPSIvYmFzdnVydS1mb3JtdS5hc3B4IiB0aXRsZT0ixLBuc2FuIEtheW5ha2xhcsSxIiA+PGltZyBzcmM9Ii9pbWFnZXMvbWVudS8yMDEzODI4NGRmZjhiYWItMWE2My00NjZkLWJiNTMtZThjOThjMzk0Y2I4LmpwZyIgYWx0PSIiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+PC9hPjwvZGl2Pgo8ZGl2IGNsYXNzPSJkZXNjIGZsIj48aDM+PGEgaHJlZj0iL2Jhc3Z1cnUtZm9ybXUuYXNweCIgdGl0bGU9IsSwbnNhbiBLYXluYWtsYXLEsSIgPsSwbnNhbiBLYXluYWtsYXLEsTwvYT48L2gzPgo8cD48YSBocmVmPSIvYmFzdnVydS1mb3JtdS5hc3B4IiB0aXRsZT0ixLBuc2FuIEtheW5ha2xhcsSxIiA+xZ5pcmtldGltaXplIG9ubGluZSBvbGFyYWsgacWfIGJhxZ92dXJ1c3VuZGEgYnVsdW5tYWsgacOnaW4gdMSxa2xhecSxbsSxei48L2E+PC9wPgo8L2Rpdj4KPC9saT4KPC91bD4KPC9saT4KPGxpIGNsYXNzPSJtYWluIj48YSBocmVmPSIvZGVmYXVsdC5hc3B4IiB0aXRsZT0iQW5hIFNheWZhIiA+QW5hIFNheWZhPC9hPgo8L2xpPgo8L3VsPgpkAgMPZBYGAgEPDxYCHghJbWFnZVVybAUpL2ltYWdlcy9zYXlmYWxhcmdhbGVyaS9oem1ldGxlcl9lMWY4OC5qcGdkZAIDDxYCHwEFEkdlbWkgVGFraXAgU2lzdGVtaWQCBQ8WAh4HVmlzaWJsZWhkAgUPZBYCAgEPFgIfAQUgPHA+PHN0cm9uZz48YnIgLz4NCjwvc3Ryb25nPjwvcD5kAgcPZBYCAgEPFgIfAQUVR0VNxLAgxLBaTEVNRSBTQVlGQVNJZAIJD2QWAgIBDxYCHwEFEkdlbWkgVGFraXAgU2lzdGVtaWQCCw9kFgYCAQ9kFgICAQ88KwARAwAPFgQeC18hRGF0YUJvdW5kZx4LXyFJdGVtQ291bnQCAWQBEBYAFgAWAAwUKwAAFgJmD2QWBAIBD2QWCmYPDxYCHwEFCENJTlpJQSBBZGQCAQ8PFgIfAQUDQ01BZGQCAg8PFgIfAQUQMDUuMDYuMjAyNiAwMjoxNWRkAgMPDxYCHwEFEDA1LjA2LjIwMjYgMDI6NDZkZAIEDw8WAh8BBRAwNS4wNi4yMDI2IDE2OjAwZGQCAg8PFgIfA2hkZAIDD2QWAgIBDzwrABEDAA8WBB8EZx8FAg9kARAWABYAFgAMFCsAABYCZg9kFiACAQ9kFghmDw8WAh8BBQlNViBEVU1NWTFkZAIBDw8WAh8BBQlVTklBR0hPUlRkZAICDw8WAh8BBRAwMS4wMS4yMDI2IDE1OjAwZGQCAw8PFgIfAQUQMDEuMDEuMjAyNiAxNTowMGRkAgIPZBYIZg8PFgIfAQUQTUVES09OIENBTkFLS0FMRWRkAgEPDxYCHwEFBk1FREtPTmRkAgIPDxYCHwEFEDI1LjA1LjIwMjYgMTQ6MjJkZAIDDw8WAh8BBRAyNi4wNS4yMDI2IDEzOjIyZGQCAw9kFghmDw8WAh8BBQ5DTUEgQ0dNIFNBSEFSQWRkAgEPDxYCHwEFA0NNQWRkAgIPDxYCHwEFEDI2LjA1LjIwMjYgMDk6MDBkZAIDDw8WAh8BBRAyNy4wNS4yMDI2IDAyOjAwZGQCBA9kFghmDw8WAh8BBQ9IQU5TQSBST1RFTkJVUkdkZAIBDw8WAh8BBQNDTUFkZAICDw8WAh8BBRAwMS4wNi4yMDI2IDExOjA3ZGQCAw8PFgIfAQUQMDIuMDYuMjAyNiAxMDowN2RkAgUPZBYIZg8PFgIfAQUGTU9MSVZBZGQCAQ8PFgIfAQUGTUVES09OZGQCAg8PFgIfAQUQMDUuMDYuMjAyNiAyMDowMGRkAgMPDxYCHwEFEDA2LjA2LjIwMjYgMTE6MDBkZAIGD2QWCGYPDxYCHwEFCUFJVE9MSUtPU2RkAgEPDxYCHwEFA0NNQWRkAgIPDxYCHwEFEDA2LjA2LjIwMjYgMDY6MzBkZAIDDw8WAh8BBRAwNi4wNi4yMDI2IDIzOjAwZGQCBw9kFghmDw8WAh8BBQhBTCBCSUREQWRkAgEPDxYCHwEFC05PQVRVTSBHRU1JZGQCAg8PFgIfAQUQMDYuMDYuMjAyNiAxMDowMGRkAgMPDxYCHwEFEDA3LjA2LjIwMjYgMDI6MDBkZAIID2QWCGYPDxYCHwEFBUVURSBOZGQCAQ8PFgIfAQUKTUFFUlNLIEEuU2RkAgIPDxYCHwEFEDA2LjA2LjIwMjYgMjI6MDBkZAIDDw8WAh8BBRAwOC4wNi4yMDI2IDIwOjAwZGQCCQ9kFghmDw8WAh8BBRBBTFRBTUlSQSBFWFBSRVNTZGQCAQ8PFgIfAQUFQVJLQVNkZAICDw8WAh8BBRAwNy4wNi4yMDI2IDA2OjAwZGQCAw8PFgIfAQUQMDguMDYuMjAyNiAwNDowMGRkAgoPZBYIZg8PFgIfAQUPTkVWWkFUIEtBTEtBVkFOZGQCAQ8PFgIfAQUGVFVSS09OZGQCAg8PFgIfAQUQMDcuMDYuMjAyNiAwODowMGRkAgMPDxYCHwEFEDA3LjA2LjIwMjYgMjM6MDBkZAILD2QWCGYPDxYCHwEFD0NNQSBDR00gTU9OVE9JUmRkAgEPDxYCHwEFA0NNQWRkAgIPDxYCHwEFEDA3LjA2LjIwMjYgMDk6MjlkZAIDDw8WAh8BBRAwOC4wNi4yMDI2IDA4OjI5ZGQCDA9kFghmDw8WAh8BBQhBU1RSQUlPU2RkAgEPDxYCHwEFA0NNQWRkAgIPDxYCHwEFEDA4LjA2LjIwMjYgMTY6MDBkZAIDDw8WAh8BBRAwOS4wNi4yMDI2IDA0OjAwZGQCDQ9kFghmDw8WAh8BBQxDT05UU0hJUCBCT1hkZAIBDw8WAh8BBQNDTUFkZAICDw8WAh8BBRAwOS4wNi4yMDI2IDA3OjAwZGQCAw8PFgIfAQUQMDkuMDYuMjAyNiAyMzowMGRkAg4PZBYIZg8PFgIfAQULRUxJU0FCRVRIIFBkZAIBDw8WAh8BBQpNQUVSU0sgQS5TZGQCAg8PFgIfAQUQMDkuMDYuMjAyNiAwOTowMGRkAgMPDxYCHwEFEDEwLjA2LjIwMjYgMDQ6MDBkZAIPD2QWCGYPDxYCHwEFEUNNQSBDR00gQkFSUkFDVURBZGQCAQ8PFgIfAQUDQ01BZGQCAg8PFgIfAQUQMDkuMDYuMjAyNiAxNjowMGRkAgMPDxYCHwEFEDEwLjA2LjIwMjYgMDk6MDBkZAIQDw8WAh8DaGRkAgUPZBYCAgMPPCsAEQMADxYEHwRnHwUCCmQBEBYAFgAWAAwUKwAAFgJmD2QWFgIBD2QWCGYPDxYCHwEFDEVSQVNNVVMgR09BTGRkAgEPDxYCHwEFA0NNQWRkAgIPDxYCHwEFEDI2LjA1LjIwMjYgMTI6NTRkZAIDDw8WAh8BBRAyNy4wNS4yMDI2IDA1OjIwZGQCAg9kFghmDw8WAh8BBQ5DTUEgQ0dNIFNZRE5FWWRkAgEPDxYCHwEFA0NNQWRkAgIPDxYCHwEFEDI4LjA1LjIwMjYgMTc6NDJkZAIDDw8WAh8BBRAyOS4wNS4yMDI2IDA5OjQyZGQCAw9kFghmDw8WAh8BBQhQSUVSUkUgQWRkAgEPDxYCHwEFA0NNQWRkAgIPDxYCHwEFEDI4LjA1LjIwMjYgMjA6NDVkZAIDDw8WAh8BBRAyOS4wNS4yMDI2IDIwOjI2ZGQCBA9kFghmDw8WAh8BBQVFVEUgTmRkAgEPDxYCHwEFCk1BRVJTSyBBLlNkZAICDw8WAh8BBRAzMC4wNS4yMDI2IDIxOjAwZGQCAw8PFgIfAQUQMDEuMDYuMjAyNiAxMToyM2RkAgUPZBYIZg8PFgIfAQUMTUFFUlNLIElEQUhPZGQCAQ8PFgIfAQUKTUFFUlNLIEEuU2RkAgIPDxYCHwEFEDMxLjA1LjIwMjYgMTQ6NTRkZAIDDw8WAh8BBRAwMS4wNi4yMDI2IDEzOjQwZGQCBg9kFghmDw8WAh8BBQZPWUtVIEFkZAIBDw8WAh8BBQVBUktBU2RkAgIPDxYCHwEFEDAxLjA2LjIwMjYgMTI6NTBkZAIDDw8WAh8BBRAwMS4wNi4yMDI2IDIzOjUzZGQCBw9kFghmDw8WAh8BBQlTVEFOTEVZIEFkZAIBDw8WAh8BBQVBUktBU2RkAgIPDxYCHwEFEDAxLjA2LjIwMjYgMTY6MzVkZAIDDw8WAh8BBRAwMi4wNi4yMDI2IDA2OjIwZGQCCA9kFghmDw8WAh8BBQ1LQUFOIEtBTEtBVkFOZGQCAQ8PFgIfAQUGVFVSS09OZGQCAg8PFgIfAQUQMDIuMDYuMjAyNiAwMDo0OGRkAgMPDxYCHwEFEDAyLjA2LjIwMjYgMTI6MjVkZAIJD2QWCGYPDxYCHwEFEE1FREtPTiBDQU5BS0tBTEVkZAIBDw8WAh8BBQZNRURLT05kZAICDw8WAh8BBRAwMi4wNi4yMDI2IDA5OjM2ZGQCAw8PFgIfAQUQMDIuMDYuMjAyNiAxODo1MmRkAgoPZBYIZg8PFgIfAQUNU09OR0EgUEFOVEhFUmRkAgEPDxYCHwEFA0NNQWRkAgIPDxYCHwEFEDAzLjA2LjIwMjYgMDE6MDBkZAIDDw8WAh8BBRAwMy4wNi4yMDI2IDE0OjIxZGQCCw8PFgIfA2hkZAIPD2QWAmYPFgIfAQXjBDx1bCBjbGFzcz0ibCByIG8gZmwiPgo8bGk+PGEgaHJlZj0iL2RlZmF1bHQuYXNweCIgdGl0bGU9IkFOQSBTQVlGQSIgPkFOQSBTQVlGQTwvYT4KPC9saT4KPGxpPjxhIGhyZWY9Ii90YW5pdGltLmFzcHgiIHRpdGxlPSJUQ0VFR0UgSEFLS0lOREEiID5UQ0VFR0UgSEFLS0lOREE8L2E+CjwvbGk+CjxsaT48YSBocmVmPSIvaGl6bWV0bGVyaW1pei5hc3B4IiB0aXRsZT0iSMSwWk1FVExFUsSwTcSwWiIgPkjEsFpNRVRMRVLEsE3EsFo8L2E+CjwvbGk+CjxsaT48YSBocmVmPSIvdGVybWluYWwtb3plbGxpa2xlcmkuYXNweCIgdGl0bGU9IlRFUk3EsE5BTMSwTcSwWiIgPlRFUk3EsE5BTMSwTcSwWjwvYT4KPC9saT4KPGxpPjxhIGhyZWY9Imh0dHA6Ly8yMTMuNzQuOTIuMTMxL3dlYi9UQ0UvdGNlb25sX2kuaHRtIiB0aXRsZT0iVENFRUdFIE9OTElORSIgdGFyZ2V0PSJfYmxhbmsiPlRDRUVHRSBPTkxJTkU8L2E+CjwvbGk+CjxsaT48YSBocmVmPSIvaGFiZXJsZXIuYXNweCIgdGl0bGU9IkhBQkVSTEVSIiA+SEFCRVJMRVI8L2E+CjwvbGk+CjxsaT48YSBocmVmPSIvaWxldGlzaW0uYXNweCIgdGl0bGU9IsSwTEVUxLDFnsSwTSIgPsSwTEVUxLDFnsSwTTwvYT4KPC9saT4KPC91bD4KZAIFD2QWAmYPFgIfA2hkGAMFI2N0bDAwJGljZXJpayRtYW51YWxHcmlkVmlld19heXJpbGFuDzwrAAwBCAIBZAUkY3RsMDAkaWNlcmlrJG1hbnVhbEdyaWRWaWV3X2Jla2xleWVuDzwrAAwBCAIBZAUiY3RsMDAkaWNlcmlrJG1hbnVhbEdyaWRWaWV3X21ldmN1dA88KwAMAQgCAWTdL+UuyPQSWqcwO0ePNNmd7suNaMm+vKA4i3/JA7J+Zg==" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="94CBAA6E" />
+        
+
+
+<div id="header" class="r">
+    <div class="m c">
+
+        <h1 id="logo" class="a"><a class="b" href="/default.aspx" title="TCE EGE | Konteyner Terminal İşletmeleri">TCE EGE | Konteyner Terminal İşletmeleri</a></h1>
+          <h2 id="tcb" class="a"></h2>
+
+        <ul id="lang" class="l a">
+            <li><a href="/default.aspx" title="">TÜRKÇE</a></li>
+            <li><a href="/en" title="">ENGLISH</a></li>
+        </ul>
+        <!-- #langs : ends -->
+
+        <ul id="nav" class="l a">
+<li class="main"><a href="/iletisim.aspx" title="İletişim" >İletişim</a>
+</li>
+<li class="main"><a href="/haberler.aspx" title="Haberler" >Haberler</a>
+</li>
+<li class="main"><a href="/musteri-girisi.aspx" title="TCEEGE Online" >TCEEGE Online</a>
+<ul>
+<li><div class="image fl"><a href="http://online.tceege.com.tr/GullsEyeWeb/View/LogOnView.aspx" title="Müşteri Girişi" target="_blank"><img src="/images/menu/20138282f5d1cbc-7198-46c4-a45b-490161e8cf53.jpg" alt="" width="50" height="50"></a></div>
+<div class="desc fl"><h3><a href="http://online.tceege.com.tr/GullsEyeWeb/View/LogOnView.aspx" title="Müşteri Girişi" target="_blank">Müşteri Girişi</a></h3>
+<p><a href="http://online.tceege.com.tr/GullsEyeWeb/View/LogOnView.aspx" title="Müşteri Girişi" target="_blank">Müşteri giriş sistemimizi kullanarak online hizmetlerimizden yararlanabilirsiniz.</a></p>
+</div>
+</li>
+<li><div class="image fl"><a href="/yanasma-plani.aspx" title="Yanaşma Planı" ><img src="/images/menu/2013828b598d9c5-37d1-4131-a295-3cceb0c5d852.jpg" alt="" width="50" height="50"></a></div>
+<div class="desc fl"><h3><a href="/yanasma-plani.aspx" title="Yanaşma Planı" >Yanaşma Planı</a></h3>
+<p><a href="/yanasma-plani.aspx" title="Yanaşma Planı" >Yanaşma Planı ile ilgili detayları öğrenmek için tıklayınız.</a></p>
+</div>
+</li>
+<li><div class="image fl"><a href="/cfs-hizmetleri-talep-formu.aspx" title="CFS Hizmetleri Talep Formu" ><img src="/images/menu/2013828cd957234-dbcb-40f8-acbd-1182cc7aa7c8.jpg" alt="" width="50" height="50"></a></div>
+<div class="desc fl"><h3><a href="/cfs-hizmetleri-talep-formu.aspx" title="CFS Hizmetleri Talep Formu" >CFS Hizmetleri Talep Formu</a></h3>
+<p><a href="/cfs-hizmetleri-talep-formu.aspx" title="CFS Hizmetleri Talep Formu" >CFS Hizmetleri Talep Formunu bilgisayarınıza indirmek için tıklayınız.</a></p>
+</div>
+</li>
+<li style="margin-right:0;"><div class="image fl"><a href="/banka-hesap-numaralari.aspx" title="Tarifeler ve Hesaplar" ><img src="/images/menu/201382832ff6a37-a867-4232-ba72-b71814019a38.jpg" alt="" width="50" height="50"></a></div>
+<div class="desc fl"><h3><a href="/banka-hesap-numaralari.aspx" title="Tarifeler ve Hesaplar" >Tarifeler ve Hesaplar</a></h3>
+<p><a href="/banka-hesap-numaralari.aspx" title="Tarifeler ve Hesaplar" >Banka hesap numaralarımızı öğrenmek için tıklayınız.</a></p>
+</div>
+</li>
+</ul>
+</li>
+<li class="main"><a href="/terminal-ozellikleri.aspx" title="Terminal" >Terminal</a>
+<ul>
+<li><div class="image fl"><a href="/terminal-ozellikleri.aspx" title="Terminal Özellikleri" ><img src="/images/menu/2013828ce07af2c-6f49-4b57-87b9-f3850f973dbb.jpg" alt="" width="50" height="50"></a></div>
+<div class="desc fl"><h3><a href="/terminal-ozellikleri.aspx" title="Terminal Özellikleri" >Terminal Özellikleri</a></h3>
+<p><a href="/terminal-ozellikleri.aspx" title="Terminal Özellikleri" >Aliağa, Nemrut Körfezinde Ege Gübre Sanayi Liman Tesisleri içerisinde hizmet veren TCEEGE; 703 m gemi yanaşılabilir...</a></p>
+</div>
+</li>
+<li><div class="image fl"><a href="/ekipmanlarimiz.aspx" title="Ekipmanlarımız" ><img src="/images/menu/2013828555c6c8d-d4ba-4c53-a21c-0d703f30a15b.jpg" alt="" width="50" height="50"></a></div>
+<div class="desc fl"><h3><a href="/ekipmanlarimiz.aspx" title="Ekipmanlarımız" >Ekipmanlarımız</a></h3>
+<p><a href="/ekipmanlarimiz.aspx" title="Ekipmanlarımız" >Ekipmanlarımızı ve bu ekipmanlara ait teknik özellikleri öğrenmek için tıklayınız.</a></p>
+</div>
+</li>
+<li><div class="image fl"><a href="/fotograf-galerisi.aspx" title="Fotoğraf Galerisi" ><img src="/images/menu/20138284b9fe7a2-a2ef-4d8f-90eb-af7efd0bd58c.jpg" alt="" width="50" height="50"></a></div>
+<div class="desc fl"><h3><a href="/fotograf-galerisi.aspx" title="Fotoğraf Galerisi" >Fotoğraf Galerisi</a></h3>
+<p><a href="/fotograf-galerisi.aspx" title="Fotoğraf Galerisi" >Fotoğraflar galerimizdeki fotoğrafları incelemek için tıklayınız.</a></p>
+</div>
+</li>
+</ul>
+</li>
+<li class="main"><a href="/hizmetlerimiz.aspx" title="Hizmetlerimiz" >Hizmetlerimiz</a>
+</li>
+<li class="main"><a href="/tanitim.aspx" title="TCEEGE Hakkında" >TCEEGE Hakkında</a>
+<ul>
+<li><div class="image fl"><a href="/tanitim.aspx" title="Hakkımızda" ><img src="/images/menu/20138289d82f77e-2440-46a2-8734-3b63d0f7dca2.jpg" alt="" width="50" height="50"></a></div>
+<div class="desc fl"><h3><a href="/tanitim.aspx" title="Hakkımızda" >Hakkımızda</a></h3>
+<p><a href="/tanitim.aspx" title="Hakkımızda" >Detaylı Bilgi almak için tıklayınız.</a></p>
+</div>
+</li>
+<li><div class="image fl"><a href="/yonetim-sistemleri.aspx" title="Yönetim Sistemleri ve Politika" ><img src="/images/menu/201382862eca82d-d001-4a4a-9540-d69eadaf49b2.jpg" alt="" width="50" height="50"></a></div>
+<div class="desc fl"><h3><a href="/yonetim-sistemleri.aspx" title="Yönetim Sistemleri ve Politika" >Yönetim Sistemleri ve Politika</a></h3>
+<p><a href="/yonetim-sistemleri.aspx" title="Yönetim Sistemleri ve Politika" >Yönetim sistemleri ile ilgili detaylı bilgi almak için tıklayınız.</a></p>
+</div>
+</li>
+<li><div class="image fl"><a href="/basvuru-formu.aspx" title="İnsan Kaynakları" ><img src="/images/menu/20138284dff8bab-1a63-466d-bb53-e8c98c394cb8.jpg" alt="" width="50" height="50"></a></div>
+<div class="desc fl"><h3><a href="/basvuru-formu.aspx" title="İnsan Kaynakları" >İnsan Kaynakları</a></h3>
+<p><a href="/basvuru-formu.aspx" title="İnsan Kaynakları" >Şirketimize online olarak iş başvurusunda bulunmak için tıklayınız.</a></p>
+</div>
+</li>
+</ul>
+</li>
+<li class="main"><a href="/default.aspx" title="Ana Sayfa" >Ana Sayfa</a>
+</li>
+</ul>
+
+
+
+
+<script type="text/javascript" language="javascript">
+	$(document).ready(function(e) {
+        $("#nav li ul li.active").filter(function() {
+            var t = $(this);
+			var p = t.parent().closest("li");
+			p.addClass("active");
+        });//filter ends
+    });//ready ends
+</script>
+
+
+        <!-- #nav : ends -->
+    </div>
+    <!-- middled content ends -->
+</div>
+<!-- #header : ends -->
+
+
+        <div id="con" class="r o">
+            <div class="m c">
+
+                <div id="masterIndex">                	
+                    <div id="masterImage" class="r o">
+                    	
+
+    <img id="ctl00_imaj_Image1" src="/images/sayfalargaleri/hzmetler_e1f88.jpg" border="0" />
+    Gemi Takip Sistemi
+    
+
+
+                    </div><!-- #masterImage : ends -->
+                    
+                    <div id="masterLeft" class="fl r">
+                    	
+    <p><strong><br />
+</strong></p>
+ 
+                        
+                        <div id="masterLogin" class="a">
+                            <div class="button a lock">
+                                <a href="http://online.tceege.com.tr/GullsEyeWeb/View/LogOnView.aspx" target="_blank" title="">SİSTEME GİRİŞ
+                                <span>müşteri giriş paneli için tıklayınız</span>
+                                </a>
+                            </div>
+                        </div><!-- #masterLogin : ends -->                   
+                    </div><!-- #masterLeft : ends -->
+                    
+                    <div id="masterRight" class="fl">
+                    	<div id="masterTitle" class="r o">
+                           
+
+    GEMİ İZLEME SAYFASI
+
+ 
+                        </div><!-- #masterTitle : ends -->
+                        
+                        <div id="masterText">
+                        	
+    <h2 style="display:none">
+        Gemi Takip Sistemi</h2>
+
+                        	
+
+    <div class="gemilerh">
+
+        
+
+        <div id="ctl00_icerik_pnl_mevcutgemis">
+	
+
+            <h2>Mevcut Gemiler</h2>
+
+            <div>
+		<table cellspacing="0" rules="all" border="1" id="ctl00_icerik_manualGridView_mevcut">
+			<tr>
+				<th scope="col">GEMİ ADI</th><th scope="col">ACENTE</th><th scope="col">YANAŞMA TARİHİ</th><th scope="col">OPR. BAŞ. TARİHİ</th><th scope="col">TAHMİNİ AYRILMA TARİHİ</th>
+			</tr><tr>
+				<td>CINZIA A</td><td class="ttt">CMA</td><td class="ttt">05.06.2026 02:15</td><td class="ttt">05.06.2026 02:46</td><td class="ttt">05.06.2026 16:00</td>
+			</tr>
+		</table>
+	</div>
+
+        
+</div>
+
+
+        <br />
+        <hr />
+        <br />
+
+        <div id="ctl00_icerik_pnl_bekleyengemis">
+	
+
+            <h2>Beklenen Gemiler</h2>
+
+            <div>
+		<table cellspacing="0" rules="all" border="1" id="ctl00_icerik_manualGridView_bekleyen">
+			<tr>
+				<th scope="col">GEMİ ADI</th><th scope="col">ACENTE</th><th scope="col">TAHMİNİ VARIŞ TARİHİ</th><th scope="col">TAHMİNİ AYRILMA TARİHİ</th>
+			</tr><tr>
+				<td>MV DUMMY1</td><td class="ttt">UNIAGHORT</td><td class="ttt">01.01.2026 15:00</td><td class="ttt">01.01.2026 15:00</td>
+			</tr><tr>
+				<td>MEDKON CANAKKALE</td><td class="ttt">MEDKON</td><td class="ttt">25.05.2026 14:22</td><td class="ttt">26.05.2026 13:22</td>
+			</tr><tr>
+				<td>CMA CGM SAHARA</td><td class="ttt">CMA</td><td class="ttt">26.05.2026 09:00</td><td class="ttt">27.05.2026 02:00</td>
+			</tr><tr>
+				<td>HANSA ROTENBURG</td><td class="ttt">CMA</td><td class="ttt">01.06.2026 11:07</td><td class="ttt">02.06.2026 10:07</td>
+			</tr><tr>
+				<td>MOLIVA</td><td class="ttt">MEDKON</td><td class="ttt">05.06.2026 20:00</td><td class="ttt">06.06.2026 11:00</td>
+			</tr><tr>
+				<td>AITOLIKOS</td><td class="ttt">CMA</td><td class="ttt">06.06.2026 06:30</td><td class="ttt">06.06.2026 23:00</td>
+			</tr><tr>
+				<td>AL BIDDA</td><td class="ttt">NOATUM GEMI</td><td class="ttt">06.06.2026 10:00</td><td class="ttt">07.06.2026 02:00</td>
+			</tr><tr>
+				<td>ETE N</td><td class="ttt">MAERSK A.S</td><td class="ttt">06.06.2026 22:00</td><td class="ttt">08.06.2026 20:00</td>
+			</tr><tr>
+				<td>ALTAMIRA EXPRESS</td><td class="ttt">ARKAS</td><td class="ttt">07.06.2026 06:00</td><td class="ttt">08.06.2026 04:00</td>
+			</tr><tr>
+				<td>NEVZAT KALKAVAN</td><td class="ttt">TURKON</td><td class="ttt">07.06.2026 08:00</td><td class="ttt">07.06.2026 23:00</td>
+			</tr><tr>
+				<td>CMA CGM MONTOIR</td><td class="ttt">CMA</td><td class="ttt">07.06.2026 09:29</td><td class="ttt">08.06.2026 08:29</td>
+			</tr><tr>
+				<td>ASTRAIOS</td><td class="ttt">CMA</td><td class="ttt">08.06.2026 16:00</td><td class="ttt">09.06.2026 04:00</td>
+			</tr><tr>
+				<td>CONTSHIP BOX</td><td class="ttt">CMA</td><td class="ttt">09.06.2026 07:00</td><td class="ttt">09.06.2026 23:00</td>
+			</tr><tr>
+				<td>ELISABETH P</td><td class="ttt">MAERSK A.S</td><td class="ttt">09.06.2026 09:00</td><td class="ttt">10.06.2026 04:00</td>
+			</tr><tr>
+				<td>CMA CGM BARRACUDA</td><td class="ttt">CMA</td><td class="ttt">09.06.2026 16:00</td><td class="ttt">10.06.2026 09:00</td>
+			</tr>
+		</table>
+	</div>
+        
+</div>
+
+        <br />
+        <hr />
+        <br />
+
+        <div id="ctl00_icerik_pnl_ayrılangemis">
+	
+
+            <h2>Ayrılan Gemiler</h2>
+
+            <span id="ctl00_icerik_lbl_Country"></span>
+
+            <div>
+		<table cellspacing="0" rules="all" border="1" id="ctl00_icerik_manualGridView_ayrilan">
+			<tr>
+				<th scope="col">GEMİ ADI</th><th scope="col">ACENTE</th><th scope="col">YANAŞMA TARİHİ</th><th scope="col">AYRILMA TARİHİ</th>
+			</tr><tr>
+				<td>ERASMUS GOAL</td><td class="ttt">CMA</td><td class="ttt">26.05.2026 12:54</td><td class="ttt">27.05.2026 05:20</td>
+			</tr><tr>
+				<td>CMA CGM SYDNEY</td><td class="ttt">CMA</td><td class="ttt">28.05.2026 17:42</td><td class="ttt">29.05.2026 09:42</td>
+			</tr><tr>
+				<td>PIERRE A</td><td class="ttt">CMA</td><td class="ttt">28.05.2026 20:45</td><td class="ttt">29.05.2026 20:26</td>
+			</tr><tr>
+				<td>ETE N</td><td class="ttt">MAERSK A.S</td><td class="ttt">30.05.2026 21:00</td><td class="ttt">01.06.2026 11:23</td>
+			</tr><tr>
+				<td>MAERSK IDAHO</td><td class="ttt">MAERSK A.S</td><td class="ttt">31.05.2026 14:54</td><td class="ttt">01.06.2026 13:40</td>
+			</tr><tr>
+				<td>OYKU A</td><td class="ttt">ARKAS</td><td class="ttt">01.06.2026 12:50</td><td class="ttt">01.06.2026 23:53</td>
+			</tr><tr>
+				<td>STANLEY A</td><td class="ttt">ARKAS</td><td class="ttt">01.06.2026 16:35</td><td class="ttt">02.06.2026 06:20</td>
+			</tr><tr>
+				<td>KAAN KALKAVAN</td><td class="ttt">TURKON</td><td class="ttt">02.06.2026 00:48</td><td class="ttt">02.06.2026 12:25</td>
+			</tr><tr>
+				<td>MEDKON CANAKKALE</td><td class="ttt">MEDKON</td><td class="ttt">02.06.2026 09:36</td><td class="ttt">02.06.2026 18:52</td>
+			</tr><tr>
+				<td>SONGA PANTHER</td><td class="ttt">CMA</td><td class="ttt">03.06.2026 01:00</td><td class="ttt">03.06.2026 14:21</td>
+			</tr>
+		</table>
+	</div>
+        
+</div>
+    </div>
+
+
+                            
+
+    
+
+ 
+                        </div><!-- #masterText : ends -->
+                    </div><!-- #masterRight : ends -->
+                    
+
+                    
+                    
+                    
+                    
+
+                    <div class="cl"></div>
+                </div>
+                <!-- #index : ends -->
+
+                <div id="submenu">
+                    <ul class="l r o fl">
+<li><a href="/default.aspx" title="ANA SAYFA" >ANA SAYFA</a>
+</li>
+<li><a href="/tanitim.aspx" title="TCEEGE HAKKINDA" >TCEEGE HAKKINDA</a>
+</li>
+<li><a href="/hizmetlerimiz.aspx" title="HİZMETLERİMİZ" >HİZMETLERİMİZ</a>
+</li>
+<li><a href="/terminal-ozellikleri.aspx" title="TERMİNALİMİZ" >TERMİNALİMİZ</a>
+</li>
+<li><a href="http://213.74.92.131/web/TCE/tceonl_i.htm" title="TCEEGE ONLINE" target="_blank">TCEEGE ONLINE</a>
+</li>
+<li><a href="/haberler.aspx" title="HABERLER" >HABERLER</a>
+</li>
+<li><a href="/iletisim.aspx" title="İLETİŞİM" >İLETİŞİM</a>
+</li>
+</ul>
+
+
+
+
+                    <!-- #nav : ends -->
+
+                    <div id="coordinates" class="fl">
+                        <span>koordinatlarımız</span><br />
+                        38&ordm; 45&prime; 35&quot; N - 26&ordm; 55&prime; 38&quot; E
+                    </div>
+                    <!-- #coordinates : ends -->
+
+                    <div id="phone" class="fl">
+                        <small>+90 232</small> 625 12 34
+                    </div>
+                    <!-- #phone : ends -->
+
+                    <div class="cl"></div>
+                </div>
+                <!-- #submenu : ends -->
+
+            </div>
+            <!-- middled content ends -->
+        </div>
+        <!-- #con : ends -->
+
+
+
+        <!--Tasarımınız Buraya Gelecek-->
+        
+
+<div id="footer" class="r o">
+    <div class="m c">
+        <p>
+            COPYRIGHT TCEEGE KONTEYNER TERMİNAL İŞLETMELERİ A.Ş. &copy; 2013<br />
+            <small>Bu sitede kullanılan yazılı ya da görsel dokümanlar izinsiz kullanılamaz.</small>
+        </p>
+        <p><a href="http://www.venusajans.com" target="_blank" title="Web Tasarım: Venüs Ajans">Web Tasarım: Venüs Ajans</a></p>
+        <div id="share" class="a">
+            <!-- AddThis Button BEGIN -->
+            <a href="http://www.addthis.com/bookmark.php?v=300&amp;pubid=xa-520c7e201c9c2f4a" class="addthis_button">PAYLAŞ</a>
+            <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-520c7e201c9c2f4a" type="text/javascript" tabindex="1000"></script>
+            <div style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;" id="_atssh">
+                <iframe id="_atssh249" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px none; left: 0px; top: 0px;" src="//s7.addthis.com/static/r07/sh135.html#"></iframe>
+            </div>
+            <script type="text/javascript" src="http://s7.addthis.com/static/r07/core091.js"></script>
+            <!-- AddThis Button END -->
+        </div>
+        <!-- #share : ends -->
+    </div>
+    <!-- middled content ends -->
+    <div class="cl"></div>
+</div>
+<!-- #con : ends -->
+
+    </form>
+    
+</body>
+</html>
