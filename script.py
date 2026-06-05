@@ -16,6 +16,9 @@ tables = soup.find_all("table")
 
 print(f"{len(tables)} tablo bulundu")
 
+for i, t in enumerate(tables):
+    print(f"Tablo {i}:", t.get_text(strip=True)[:100])
+
 # 🔥 Şimdilik en basit yöntem: tüm satırları tara
 rows = soup.find_all("tr")
 
