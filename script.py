@@ -53,7 +53,7 @@ with open(CSV_FILE, "a", newline="", encoding="utf-8") as f:
         writer.writerow(["ship", "arrival", "departure", "agent"])
 
     for s in ships:
-        key = s[0] + s[2]
+        key = "|".join([x.strip() for x in s])
 
         if key not in existing:
             writer.writerow(s)
