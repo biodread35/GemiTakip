@@ -1,0 +1,7 @@
+Week - Agent - ShipCount
+22 - CMA - 3
+23 - MAERSK A.S - 2
+23 - ARKAS - 2
+23 - TURKON - 1
+23 - MEDKON - 1
+23 - CMA - 1
