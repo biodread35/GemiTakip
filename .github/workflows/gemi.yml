@@ -18,6 +18,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Kütüphaneleri yükle
+        run: pip install requests beautifulsoup4
+
       - name: Script çalıştır
         run: python script.py
 
