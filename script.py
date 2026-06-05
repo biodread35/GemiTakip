@@ -2,17 +2,33 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 import os
+import time
 
 URL = "http://www.tceege.com.tr/gemi-izleme.aspx"
 CSV_FILE = "data/departures.csv"
 
 print("Sayfa çekiliyor...")
+print(f"URL: {URL}")
 
-# sayfayı çek
-r = requests.get(URL, timeout=30)
+# 3 denemeli retry mekanizması
+r = None
+for attempt in range(3):
+    try:
+        r = requests.get(URL, timeout=30)
+        print("Sayfa başarıyla çekildi")
+        print(f"HTTP Status: {r.status_code}")
+        break
+    except requests.exceptions.RequestException as e:
+        print(f"Deneme {attempt+1}/3 başarısız: {e}")
+        if attempt < 2:
+            print("30 saniye bekleniyor...")
+            time.sleep(30)
+        else:
+            print("⚠ Sayfa çekilemedi, workflow sonlandırılıyor.")
+            raise
+
 soup = BeautifulSoup(r.text, "html.parser")
 
-# tabloları bul
 tables = soup.find_all("table")
 print(f"{len(tables)} tablo bulundu")
 
@@ -28,6 +44,7 @@ ships = []
 
 for row in rows[1:]:  # başlık satırını atla
     cols = [c.get_text(strip=True) for c in row.find_all("td")]
+    # 4 kolon: gemi, acente, geliş, ayrılış
     if len(cols) == 4:
         ships.append(cols)
 
@@ -50,10 +67,8 @@ if os.path.exists(CSV_FILE):
 new_rows = 0
 with open(CSV_FILE, "a", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
-    
     if os.stat(CSV_FILE).st_size == 0:
         writer.writerow(["ship", "agent", "arrival", "departure"])
-    
     for s in ships:
         key = "|".join([x.strip() for x in s])
         if key not in existing:
