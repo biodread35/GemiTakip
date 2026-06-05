@@ -1,0 +1,30 @@
+name: Gemi Takip
+
+on:
+  schedule:
+    - cron: "0 6 * * *"  # günde 1 kez (06:00)
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repo indir
+        uses: actions/checkout@v4
+
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Script çalıştır
+        run: python script.py
+
+      - name: Değişiklikleri kaydet
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "update ships" || exit 0
+          git push
