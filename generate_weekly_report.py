@@ -8,7 +8,7 @@ REPORT_FILE = "data/weekly_report.txt"
 os.makedirs("data", exist_ok=True)
 
 df = pd.read_csv(CSV_FILE)
-df['departure'] = pd.to_datetime(df['departure'], errors='coerce')
+df['departure'] = pd.to_datetime(df['departure'], errors='coerce', dayfirst=True)
 df['week'] = df['departure'].dt.isocalendar().week
 
 report_lines = ["Week - Agent - ShipCount"]
