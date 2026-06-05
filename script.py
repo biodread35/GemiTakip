@@ -25,7 +25,7 @@ ships = []
 for row in rows:
     cols = [c.get_text(strip=True) for c in row.find_all("td")]
 
-    # 4 kolon: gemi, geliş, ayrılış, acente
+    # 4 kolon: gemi, acente, geliş, ayrılış
     if len(cols) == 4:
         ships.append(cols)
 
@@ -42,7 +42,7 @@ if os.path.exists(CSV_FILE):
         next(reader, None)
         for row in reader:
             if len(row) >= 3:
-                existing.add(row[0] + row[2])
+                existing.add("|".join([x.strip() for x in row]))
 
 new_rows = 0
 
@@ -50,7 +50,7 @@ with open(CSV_FILE, "a", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
 
     if os.stat(CSV_FILE).st_size == 0:
-        writer.writerow(["ship", "arrival", "departure", "agent"])
+        writer.writerow(["ship", "agent", "arrival", "departure"])
 
     for s in ships:
         key = "|".join([x.strip() for x in s])
