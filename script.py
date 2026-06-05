@@ -15,6 +15,9 @@ soup = BeautifulSoup(r.text, "html.parser")
 # tabloları bul
 tables = soup.find_all("table")
 print(f"{len(tables)} tablo bulundu")
+for i, table in enumerate(tables):
+    print(f"--- TABLO {i} ---")
+    print(table.get_text(" ", strip=True)[:200])
 
 # ✅ Dinamik olarak "Ayrılan Gemiler" tablosunu bul
 target_table = None
