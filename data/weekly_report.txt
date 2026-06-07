@@ -5,3 +5,4 @@ Week - Agent - ShipCount - TotalTime
 23 - TURKON - 1 - 11:37
 23 - MEDKON - 2 - 15:20
 23 - CMA - 2 - 26:34
+23 - NOATUM GEMI - 1 - 5:02
