@@ -27,5 +27,6 @@ Week - Agent - ShipCount - TotalTime
 27 - CMA - 3 - 61:00
 27 - TURKON - 3 - 38:51
 27 - MEDKON - 1 - 6:59
-28 - ARKAS - 1 - 21:44
+28 - ARKAS - 2 - 30:31
 28 - MAERSK A.S - 1 - 39:53
+28 - MEDKON - 1 - 16:35
