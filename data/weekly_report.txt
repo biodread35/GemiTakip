@@ -44,4 +44,6 @@ Week - Agent - ShipCount - TotalTime
 30 - TURKON - 2 - 29:10
 30 - MEDKON - 2 - 35:03
 31 - MAERSK A.S - 1 - 31:23
-31 - CMA - 1 - 24:22
+31 - CMA - 2 - 40:36
+31 - ARKAS - 1 - 31:00
+31 - NOATUM GEMI - 1 - 10:45
