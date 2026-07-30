@@ -47,3 +47,4 @@ Week - Agent - ShipCount - TotalTime
 31 - CMA - 2 - 40:36
 31 - ARKAS - 2 - 44:50
 31 - NOATUM GEMI - 1 - 10:45
+31 - MEDKON - 2 - 14:00
