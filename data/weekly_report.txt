@@ -61,3 +61,4 @@ Week - Agent - ShipCount - TotalTime
 33 - NOATUM GEMI - 1 - 7:30
 34 - TURKON - 1 - 11:29
 34 - MAERSK A.S - 1 - 16:12
+34 - ARKAS - 1 - 24:16
